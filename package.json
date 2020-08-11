@@ -22,9 +22,6 @@
   },
   "lint-staged": {
     "*.{js,jsx,json,ts,tsx,css,scss,md}": "yarn prettier",
-    "*.{js,jsx,ts,tsx}": [
-      "yarn lint",
-      "git add"
-    ]
+    "*.{js,jsx,ts,tsx}": "yarn lint"
   }
 }
