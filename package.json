@@ -1,0 +1,30 @@
+{
+  "name": "root",
+  "workspaces": [
+    "packages/*"
+  ],
+  "private": true,
+  "devDependencies": {
+    "eslint": "^7.6.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.0.5",
+    "wsrun": "^5.2.1"
+  },
+  "scripts": {
+    "lint": "yarn wsrun --exclude-missing lint",
+    "prettier": "yarn wsrun --exclude-missing prettier"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,json,ts,tsx,css,scss,md}": "yarn prettier",
+    "*.{js,jsx,ts,tsx}": [
+      "yarn lint",
+      "git add"
+    ]
+  }
+}
