@@ -4,7 +4,7 @@ import { Box } from '@chakra-ui/core';
 function App() {
   return (
     <Box bg="hotpink" w={1 / 2}>
-      Hello world
+      Hello worlds
     </Box>
   );
 }
