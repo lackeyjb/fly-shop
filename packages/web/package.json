@@ -31,7 +31,8 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx --cache --fix",
     "prettier": "prettier . --write",
     "serve": "serve --no-clipboard --single build",
-    "test": "react-scripts test"
+    "test": "react-scripts test",
+    "test:coverage": "yarn test --coverage --watchAll=false"
   },
   "eslintConfig": {
     "extends": [

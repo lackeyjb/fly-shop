@@ -12,7 +12,9 @@
     "wsrun": "^5.2.1"
   },
   "scripts": {
+    "start": "yarn wsrun -p web api -c start",
     "lint": "yarn wsrun --exclude-missing lint",
+    "test": "yarn wsrun --exclude-missing test:coverage",
     "prettier": "yarn wsrun --exclude-missing prettier"
   },
   "husky": {
@@ -22,6 +24,9 @@
   },
   "lint-staged": {
     "*.{js,jsx,json,ts,tsx,css,scss,md}": "yarn prettier",
-    "*.{js,jsx,ts,tsx}": "yarn lint"
+    "*.{js,jsx,ts,tsx}": [
+      "yarn lint",
+      "yarn test --findRelatedTests"
+    ]
   }
 }
