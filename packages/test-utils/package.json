@@ -1,0 +1,45 @@
+{
+  "name": "@flyshop/test-utils",
+  "version": "1.0.0",
+  "private": true,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "prebuild": "yarn clean",
+    "build": "tsc",
+    "clean": "rimraf dist/*",
+    "lint": "eslint . --ext .js,.ts --cache --fix",
+    "prettier": "prettier . --write",
+    "watch": "tsc --watch"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^3.6.1",
+    "eslint-config-airbnb-typescript": "^9.0.0",
+    "eslint-plugin-import": "^2.22.0",
+    "rimraf": "^3.0.2",
+    "tsconfig": "^1.0.0",
+    "typescript": "^3.9.7"
+  },
+  "eslintConfig": {
+    "extends": [
+      "airbnb-typescript/base"
+    ],
+    "parserOptions": {
+      "project": "packages/test-utils/tsconfig.json"
+    },
+    "rules": {
+      "arrow-parens": [
+        1,
+        "as-needed"
+      ],
+      "function-paren-newline": 0,
+      "import/prefer-default-export": 0,
+      "implicit-arrow-linebreak": 0
+    }
+  },
+  "dependencies": {
+    "@types/faker": "^4.1.12",
+    "faker": "^4.1.0",
+    "msw": "^0.20.5"
+  }
+}

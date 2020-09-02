@@ -1,0 +1,17 @@
+{
+  "extends": "@flyshop/tsconfig/tsconfig.json",
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "module": "esnext",
+    "noEmit": true,
+    "baseUrl": "./src"
+  },
+  "include": [
+    "src",
+    "@types"
+  ]
+}

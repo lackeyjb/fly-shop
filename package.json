@@ -1,18 +1,19 @@
 {
   "name": "root",
   "workspaces": [
+    "apps/*",
     "packages/*"
   ],
   "private": true,
   "devDependencies": {
-    "eslint": "^7.6.0",
+    "eslint": "^6.6.0",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
     "wsrun": "^5.2.1"
   },
   "scripts": {
-    "start": "yarn wsrun -p web api -c start",
+    "start": "yarn wsrun -p @flyshop/web @flyshop/api -c --exclude-missing start",
     "lint": "yarn wsrun --exclude-missing lint",
     "test": "yarn wsrun --exclude-missing test:coverage",
     "prettier": "yarn wsrun --exclude-missing prettier"
