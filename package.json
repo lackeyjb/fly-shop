@@ -10,6 +10,7 @@
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
+    "@typescript-eslint/parser": "^4.0.1",
     "wsrun": "^5.2.1"
   },
   "scripts": {

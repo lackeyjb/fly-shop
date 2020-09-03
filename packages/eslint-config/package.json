@@ -1,0 +1,13 @@
+{
+  "name": "@flyshop/eslint-config",
+  "private": true,
+  "version": "1.0.0",
+  "main": "index.js",
+  "peerDependencies": {
+    "eslint": ">= 7"
+  },
+  "dependencies": {
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-react-app": "^5.2.1"
+  }
+}
